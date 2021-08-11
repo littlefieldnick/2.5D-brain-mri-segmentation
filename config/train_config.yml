@@ -1,0 +1,17 @@
+data_dir: None
+model_out_dir: None
+epochs: 20
+lr: 0.001
+loss: dice_loss
+optimizer: adam
+metrics:
+  - iou
+  - dice
+iou_thresh: 0.5
+model: unet
+model_backbone: efficientnet-b4
+model_act: sigmoid
+encoder_weights: imagenet
+out_classes: 1
+device: cuda
+
