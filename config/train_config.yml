@@ -1,17 +1,17 @@
-data_dir: None
-model_out_dir: None
+make_stacks: False
+stack_size: 3
+data_dir: ./data/lgg-mri-segmentation/kaggle_3m/
+out_dir: ./data/lgg-mri-segmentation/2.5D/
+model_out_pth: ./models/
+augmentations: True
 epochs: 20
-lr: 0.001
-loss: dice_loss
-optimizer: adam
-metrics:
-  - iou
-  - dice
-iou_thresh: 0.5
+batch_size: 8
+lr: 0.0001
+use_lr_scheduler: True
 model: unet
-model_backbone: efficientnet-b4
+model_encoder: efficientnet-b4
 model_act: sigmoid
 encoder_weights: imagenet
-out_classes: 1
-device: cuda
+device: "cpu"
+num_classes: 1
 
