@@ -12,6 +12,7 @@ __pycache__/
 
 # Skip data directory
 data/
+models/
 
 # Distribution / packaging
 .Python
